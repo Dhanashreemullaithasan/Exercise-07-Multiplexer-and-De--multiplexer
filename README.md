@@ -54,35 +54,73 @@ If the control input changes to AB = 10, then all the gates are restricted excep
 ### PROGRAM 
 /*
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+Developed by: DHANASHREE M
+RegisterNumber:  212221230018
 */
 
+```
+## Multiplexer
+module ex07(I0,I1,I2,I3,S0,S1,Y);
+input I0,I1,I2,I3,S0,S1;
+output Y;
+wire P,Q,R,S,S0c,S1c;
+not(S0c,S0);
+nor(S1c,S1);
+and (P,S0c,S1c,I0);
+and(Q,S0c,S1,I1);
+and(R,S0,S1c,I2);
+and(S,S0,S1,I3);
+or(Y,P,Q,R,S);
+endmodule
+
+## De-multiplexer
+
+module ex07(Y0,Y1,Y2,Y3,S0,S1,I);
+input I,S0,S1;
+output Y0,Y1,Y2,Y3;
+wire S0c,S1c;
+not(S0c,S0);
+nor(S1c,S1);
+and (Y0,I,S0c,S1c);
+and(Y1,I,S0c,S1);
+and(Y2,I,S0,S1c);
+and(Y3,I,S0,S1);
+endmodule
+
+```
+### RTL LOGIC  :
+## Multiplexer :
+
+![ex7 rtl 1](https://user-images.githubusercontent.com/94165415/199770414-493e1337-2da4-42bc-8c98-094ce335d752.png)
+
+## De-multiplexer :
+
+![EX 7 RTL2](https://user-images.githubusercontent.com/94165415/199774126-bb4adb47-dccc-49e7-b415-b6f1621d94de.png)
 
 
+### TIMING DIGRAMS : 
 
+## Multiplexer :
+Multiplexer WHEN I0=1
+![ex7 wf1](https://user-images.githubusercontent.com/94165415/199774173-0b6effe2-cae8-4e74-8ebe-9fdcce2cdce9.png)
+WHEN I1=1
+![ex7 wf 2](https://user-images.githubusercontent.com/94165415/199774195-13a863dc-2c12-46df-abc3-441eaf3b3f69.png)
+WHEN I3=1
+![ex7 wf3](https://user-images.githubusercontent.com/94165415/199774243-457b142b-8bc1-4056-8584-365dbde853a4.png)
+WHEN I2=1
+![ex7 wf4](https://user-images.githubusercontent.com/94165415/199774405-433644bf-3d1f-4c0c-a0e9-91833571b120.png)
 
+## De-multiplexer :
 
-### RTL LOGIC  
+![WF 222](https://user-images.githubusercontent.com/94165415/199774704-a25327ca-0ee6-440b-ab10-446ca642e3d7.png)
 
+### TRUTH TABLE :
 
+## Multiplexer :
+![EX7 TT1](https://user-images.githubusercontent.com/94165415/199774764-0b563e90-613c-4799-9f4b-8bbff10003db.png)
 
+## De-multiplexer :
+![EX7 TT2](https://user-images.githubusercontent.com/94165415/199774830-7b99b437-6bea-41f5-8352-74004ad60cf5.png)
 
-
-
-
-
-### TIMING DIGRAMS  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
-
-### RESULTS 
+### RESULTS :
+4 X1 multiplexer and 1X4 de multiplexer has been implemented using verilog and outputs are validated.
