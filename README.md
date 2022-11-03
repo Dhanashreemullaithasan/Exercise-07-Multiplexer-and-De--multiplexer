@@ -105,9 +105,9 @@ Multiplexer WHEN I0=1
 ![ex7 wf1](https://user-images.githubusercontent.com/94165415/199774173-0b6effe2-cae8-4e74-8ebe-9fdcce2cdce9.png)
 WHEN I1=1
 ![ex7 wf 2](https://user-images.githubusercontent.com/94165415/199774195-13a863dc-2c12-46df-abc3-441eaf3b3f69.png)
-WHEN I3=1
-![ex7 wf3](https://user-images.githubusercontent.com/94165415/199774243-457b142b-8bc1-4056-8584-365dbde853a4.png)
 WHEN I2=1
+![ex7 wf3](https://user-images.githubusercontent.com/94165415/199774243-457b142b-8bc1-4056-8584-365dbde853a4.png)
+WHEN I3=1
 ![ex7 wf4](https://user-images.githubusercontent.com/94165415/199774405-433644bf-3d1f-4c0c-a0e9-91833571b120.png)
 
 ## De-multiplexer :
